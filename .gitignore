@@ -2,3 +2,5 @@
 bundle.js
 .config
 node_modules/
+client/dist/css/
+client/dist/js/
