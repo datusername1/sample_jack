@@ -15,10 +15,12 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <div>
-          <h1>Hello Will Render Once React Sets Up</h1>
-          This is going to be the navigational Bar
-          <div>This is the search Bar</div>
+        <div className="top-bar">
+          <div className="large-12 cell">
+            <h1>Hello Will Render Once React Sets Up</h1>
+            This is going to be the navigational Bar
+            <div>This is the search Bar</div>
+          </div>
         </div>
       </div>
     );
