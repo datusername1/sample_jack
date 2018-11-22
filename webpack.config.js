@@ -48,9 +48,9 @@ module.exports = {
   },
   // this is used to proxy ports
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env.HOSTNAME': JSON.stringify(process.env.HOSTNAME),
-      'process.env.PORT': JSON.stringify(process.env.PORT),
-    }),
+    // new webpack.DefinePlugin({
+    //   'process.env.HOSTNAME': JSON.stringify(process.env.USERNAME),
+    //   'process.env.PORT': JSON.stringify(process.env.PORT),
+    // }),
   ],
 };
