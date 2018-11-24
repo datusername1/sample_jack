@@ -24,7 +24,7 @@ export default class App extends Component {
           <button class="menu-icon" type="button" data-toggle />
           <div class="title-bar-title">Menu</div>
         </div> */}
-        <div className="navigation">
+        <div className="navigation fixed">
           <NavBar />
         </div>
 

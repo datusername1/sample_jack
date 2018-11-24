@@ -1,8 +1,8 @@
-const { db } = require('./index');
+const { db } = require('../index');
 const Sequelize = require('sequelize');
 
-const sampleDb = db.define(
-  'sampleTable',
+const AgentSample = db.define(
+  'sampleagent',
   {
     _id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
     firstName: { type: Sequelize.STRING },
@@ -14,9 +14,8 @@ const sampleDb = db.define(
   }
 );
 
-sampleDb
-  .sync()
-  .then(() => console.log('Created Table DB'))
+AgentSample.sync()
+  .then(() => console.log('Synced with DB'))
   .catch(err => console.error(err));
 
-module.exports = { sampleDb };
+module.exports = { AgentSample };

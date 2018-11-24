@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require('express');
-const { sampleDb } = require('../../database/models');
+const { AgentSample } = require('../database/models/agentModels');
 
 const Controller = {
   get: (req, res) => {

@@ -2,5 +2,6 @@
 bundle.js
 .config
 node_modules/
-client/dist/css/
+client/dist/css/fondation.css
+client/dist/css/fondation.min.css
 client/dist/js/

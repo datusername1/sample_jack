@@ -5,8 +5,6 @@ const morgan = require('morgan');
 const path = require('path');
 const router = require('./routes/routes');
 
-const db = require('../database/index');
-
 const app = express();
 //express port 1128;
 
