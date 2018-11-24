@@ -1,10 +1,12 @@
 require('dotenv').config();
 const express = require('express');
-const { AgentSample } = require('../database/models/agentModels');
+const { AgentSample } = require('../../database/models/agentModels');
 
-const Controller = {
+const AgentController = {
   get: (req, res) => {
-    res.status(200).send('hello from get');
+    AgentSample.findAll({})
+      .then(data => res.status(200).send(data))
+      .catch(err => console.error(err));
   },
 
   post: (req, res) => {
@@ -20,4 +22,4 @@ const Controller = {
   },
 };
 
-module.exports = { Controller };
+module.exports = { AgentController };
