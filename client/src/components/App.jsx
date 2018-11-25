@@ -102,7 +102,7 @@ export default class App extends Component {
           </div>
         </div>
 
-        <div>
+        <div className="footer">
           <Footer />
         </div>
       </div>

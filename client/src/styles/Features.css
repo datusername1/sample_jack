@@ -6,7 +6,7 @@
 
 .column {
   max-height: 669.326px;
-  margin-top: 20px;
+  margin-top: 3rem;
 }
 
 .subheader {
@@ -24,7 +24,7 @@
 }
 
 .callout {
-  background-color: #625657cf;
+  background-color: #4f493b;
   font-family: Josefin Sans, serif !important;
   border-color: white;
   color: white;
