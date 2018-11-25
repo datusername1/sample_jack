@@ -7,6 +7,8 @@ import FindYourHome from './FindYourHome';
 import Catchphrase from './Catchphrase';
 import Features from './Features';
 import YouMayLike from './YouMayLike';
+import ContactUs from './ContactUs';
+import Footer from './Footer';
 
 export default class App extends Component {
   constructor(props) {
@@ -91,8 +93,17 @@ export default class App extends Component {
           <Features homes={this.state.homes} />
         </div>
 
-        <div className="youMayLike">
-          <YouMayLike />
+        <div className="youMayLike">{/* <YouMayLike /> */}</div>
+
+        <div className={` row contactUs ${style.row}`}>
+          <h2>Contact Us</h2>
+          <div className={`contact ${style.contactUs}`}>
+            <ContactUs />
+          </div>
+        </div>
+
+        <div>
+          <Footer />
         </div>
       </div>
     );

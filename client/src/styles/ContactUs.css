@@ -1,0 +1,23 @@
+.columns:last-child {
+  float: left;
+}
+
+label {
+  color: inherit;
+}
+
+.input {
+  height: 5rem;
+}
+
+.imgParent {
+  text-align: center;
+}
+
+.Imgrow {
+  margin-top: 1rem;
+}
+
+.row {
+  margin-top: 6rem;
+}

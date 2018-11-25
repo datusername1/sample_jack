@@ -5,7 +5,7 @@ import style from '../styles/Catchphrase.css';
 const Catchphrase = function(props) {
   return (
     <div className={`panel ${style.panel}`}>
-      <h5>Welcome to Jack Tran Real Estate</h5>
+      <h5>Always There For You</h5>
       <p>
         Incidunt beatae aliquid illo. Perspiciatis soluta sed. A odio eos iste
         et unde ipsum. Nobis eum soluta ea atque voluptate. Odit minima odio aut

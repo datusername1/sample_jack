@@ -36,3 +36,13 @@ h2 {
 .row {
   margin-top: 130px;
 }
+
+.contactUs {
+  border: solid;
+  border-color: white;
+  width: 1171px;
+}
+
+.contact {
+  color: white;
+}
