@@ -1,0 +1,11 @@
+.navigation {
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+  width: 100%;
+}
+
+.search {
+  position: relative;
+  bottom: 900px;
+}

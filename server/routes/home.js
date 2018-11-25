@@ -1,7 +1,7 @@
 const Home = require('express').Router();
 const { HomeController } = require('../controller/homeController');
 
-Home.route('/home')
+Home.route('/homes')
   .get(HomeController.get)
   .post(HomeController.post)
   .put(HomeController.update)
