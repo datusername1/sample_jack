@@ -3,7 +3,12 @@ import style from '../styles/NavBar.css';
 
 const NavBar = function(props) {
   return (
-    <div className="top-bar" id="realEstateMenu" data-topbar role="navigation">
+    <div
+      className={`top-bar ${style.topBar}`}
+      id="realEstateMenu"
+      data-topbar
+      role="navigation"
+    >
       <div className="top-bar-left">
         <ul className="menu">
           <li className={`menu-text ${style.title}`} role="menuitem">

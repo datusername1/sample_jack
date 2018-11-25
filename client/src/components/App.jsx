@@ -4,6 +4,9 @@ import style from '../styles/App.css';
 import NavBar from './NavBar';
 import BackgroundPicture from './BackgroundPic';
 import FindYourHome from './FindYourHome';
+import Catchphrase from './Catchphrase';
+import Features from './Features';
+import YouMayLike from './YouMayLike';
 
 export default class App extends Component {
   constructor(props) {
@@ -71,16 +74,25 @@ export default class App extends Component {
           <div className="orbit">
             <BackgroundPicture orbit={orbit} />
           </div>
-
           <div className={`search ${style.search}`}>
             <FindYourHome rooms={this.state.rooms} />
           </div>
         </div>
+        <div className={`catchphrase ${style.catchphrase}`}>
+          <Catchphrase />
+        </div>
 
-        <div className="large-12 cell">
-          <h1>Hello Will Render Once React Sets Up</h1>
-          This is going to be the navigational Bar
-          <div>This is the search Bar</div>
+        <div
+          className={`features ${
+            style.row
+          } row small-up-1 medium-up-2 large-up-3`}
+        >
+          <h2>Featured Homes</h2>
+          <Features homes={this.state.homes} />
+        </div>
+
+        <div className="youMayLike">
+          <YouMayLike />
         </div>
       </div>
     );

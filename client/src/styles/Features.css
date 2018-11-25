@@ -1,0 +1,35 @@
+.image {
+  width: 500px;
+  border: solid;
+  border-color: inherit;
+}
+
+.column {
+  max-height: 669.326px;
+  margin-top: 20px;
+}
+
+.subheader {
+  overflow-y: scroll;
+  max-height: 202px;
+}
+
+.listing {
+  font-size: 18px;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: 550;
+}
+
+.callout {
+  background-color: #625657cf;
+  font-family: Josefin Sans, serif !important;
+  border-color: white;
+  color: white;
+}
+
+.lead {
+  font-weight: 490;
+}

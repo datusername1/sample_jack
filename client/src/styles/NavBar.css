@@ -1,7 +1,13 @@
 .title {
   text-transform: uppercase;
+  color: white;
 }
 
 .menuText {
   padding: 0rem 0rem;
+}
+
+.topBar,
+.topBar ul {
+  background-color: #4f493b;
 }
