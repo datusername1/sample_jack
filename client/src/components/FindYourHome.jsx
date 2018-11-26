@@ -12,7 +12,7 @@ class FindYourHome extends Component {
     return (
       <form>
         <div class="row">
-          <div class="large-4 columns">
+          <div class="large-3 columns">
             <label className={style.label}>
               Address
               <input type="text" placeholder="Address, City, State, Zip" />
@@ -55,6 +55,9 @@ class FindYourHome extends Component {
                 ))}
               </select>
             </label>
+          </div>
+          <div class="large-1 columns">
+            <a className={`button ${style.button}`}>FIND</a>
           </div>
         </div>
       </form>

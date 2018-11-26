@@ -18,8 +18,9 @@
 }
 
 body {
-  background-color: #2a2a2a;
+  background-color: #3b424a;
   color: white;
+  font-family: Josefin Sans, serif !important;
 }
 
 h2 {
