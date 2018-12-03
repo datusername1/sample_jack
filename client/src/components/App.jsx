@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import style from '../styles/App.css';
+
 import NavBar from './NavBar';
 import BackgroundPicture from './BackgroundPic';
 import FindYourHome from './FindYourHome';
+
 import Catchphrase from './Catchphrase';
 import Features from './Features';
+
 import YouMayLike from './YouMayLike';
+
+import Test from './test';
 import ContactUs from './ContactUs';
 import Footer from './Footer';
 
@@ -50,7 +55,7 @@ export default class App extends Component {
   }
 
   render() {
-    const orbit = [
+    const slick = [
       `https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260`,
       `https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260`,
       `https://images.pexels.com/photos/1027516/pexels-photo-1027516.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260`,
@@ -73,8 +78,8 @@ export default class App extends Component {
         </div>
 
         <div className="BackgroundAndSearch">
-          <div className="orbit">
-            <BackgroundPicture orbit={orbit} />
+          <div className="slick">
+            <BackgroundPicture slick={slick} />
           </div>
           <div className={`search ${style.search}`}>
             <FindYourHome rooms={this.state.rooms} />
@@ -100,6 +105,10 @@ export default class App extends Component {
           <div className={`contact ${style.contactUs}`}>
             <ContactUs />
           </div>
+        </div>
+
+        <div className="test">
+          <Test />
         </div>
 
         <div className="footer">

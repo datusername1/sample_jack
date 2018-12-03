@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import style from '../styles/BackgroundPic.css';
+import '../styles/BackgroundPic.css';
+import Slider from 'react-slick';
+// import '../styles/Slick.css';
 
 export default class BackgroundPic extends Component {
   constructor(props) {
@@ -7,10 +9,34 @@ export default class BackgroundPic extends Component {
   }
 
   render() {
-    const orbit = this.props.orbit;
-    const firstOrbit = orbit.slice(0, 1);
+    const settings = {
+      autoplay: false,
+      autoplaySpeed: 10000,
+      dots: false,
+      arrow: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slideToScroll: 1,
+    };
+
+    const img = this.props.slick;
+    console.log(img);
     return (
-      <div className="orbit" role="region" aria-label="sample" data-orbit>
+      <div className="orbit-container">
+        <Slider {...settings}>
+          {img.map(image => (
+            <img className="image" src={image} />
+          ))}
+        </Slider>
+      </div>
+    );
+  }
+}
+
+/*
+
+ <div className="orbit" role="region" aria-label="sample" data-orbit>
         <div class="orbit-wrapper">
           <div class="orbit-controls">
             <button class="orbit-previous">
@@ -49,6 +75,4 @@ export default class BackgroundPic extends Component {
           </button>
         </nav>
       </div>
-    );
-  }
-}
+      */
