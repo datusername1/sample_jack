@@ -1,0 +1,39 @@
+.image {
+  width: 500px;
+  border: solid;
+  border-color: white;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  height: 266px;
+  filter: brightness(70%);
+}
+
+.image:hover {
+  -webkit-filter: brightness(1);
+  cursor: pointer;
+}
+
+.price {
+  font-family: 'Josefin Sans', serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.address {
+  font-family: 'Josefin Sans', serif;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+.bedBath {
+  font-family: 'Josefin Sans', serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.cardSection {
+  position: absolute;
+  top: 10rem;
+}

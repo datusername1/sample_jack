@@ -7,8 +7,9 @@ import BackgroundPicture from './BackgroundPic';
 import Heading from './Heading';
 
 import FindYourHome from './FindYourHome';
-import Catchphrase from './Catchphrase';
+import FeatureList from './FeatureList';
 import Features from './Features';
+import Catchphrase from './Catchphrase';
 
 import YouMayLike from './YouMayLike';
 
@@ -90,18 +91,25 @@ export default class App extends Component {
             <Catchphrase />
           </div>
 
-          <div className={`search ${style.search}`}>
+          {/* <div className={`search ${style.search}`}>
             <FindYourHome rooms={this.state.rooms} />
-          </div>
-
+          </div> */}
           <div
             className={`features ${
               style.row
             } row small-up-1 medium-up-2 large-up-3`}
           >
             <h2>Featured Homes</h2>
-            <Features homes={this.state.homes} />
+            <FeatureList homes={this.state.homes} />
           </div>
+          {/* <div
+            className={`features ${
+              style.row
+            } row small-up-1 medium-up-2 large-up-3`}
+          >
+            <h2>Featured Homes</h2>
+            <Features homes={this.state.homes} />
+          </div> */}
         </div>
       );
     }
