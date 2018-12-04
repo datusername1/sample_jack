@@ -7,7 +7,6 @@
 
 .search {
   position: relative;
-  bottom: 42rem;
 }
 
 .catchphrase {
@@ -47,4 +46,13 @@ h2 {
 
 .contact {
   color: white;
+}
+
+.heading {
+  position: relative;
+  bottom: 32rem;
+}
+
+.backgroundAndHeading {
+  height: 53rem;
 }

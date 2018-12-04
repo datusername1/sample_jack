@@ -5,6 +5,7 @@ const morgan = require('morgan');
 const path = require('path');
 const agentRoute = require('./routes/agent');
 const homeRoute = require('./routes/home');
+const findRoute = require('./routes/find');
 
 const app = express();
 //express port 1128;
@@ -17,5 +18,6 @@ app.use(express.static(path.join(__dirname, '../client/dist')));
 
 app.use('/jack', agentRoute);
 app.use('/jack', homeRoute);
+app.use('/jack', findRoute);
 
 module.exports = app;

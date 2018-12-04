@@ -1,10 +1,10 @@
 require('dotenv').config();
 const express = require('express');
-const { HouseSample } = require('../../database/models/houseModel');
-const { Zillow } = require('../../helper/helpfunc');
 const okhttp = require('okhttp');
+const { Attom } = require('../../helper/helpAttom');
+const RequestBuilder = okhttp.RequestBuilder;
 
-const HomeController = {
+const FindController = {
   get: (req, res) => {
     HouseSample.findAll({})
       .then(data => res.status(200).send(data))
@@ -12,7 +12,7 @@ const HomeController = {
   },
 
   post: (req, res) => {
-    Zillow(req.body, (err, data) => {
+    Attom(req.body, (err, data) => {
       if (err) {
         console.error(err);
         res.status(404).send('not found');
@@ -32,4 +32,4 @@ const HomeController = {
   },
 };
 
-module.exports = { HomeController };
+module.exports = { FindController };

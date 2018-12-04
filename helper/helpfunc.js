@@ -1,16 +1,15 @@
 require('dotenv');
 const request = require('request');
-const okhttp = require('okhttp');
 
-const Attom = (info, cb) => {
+const Zillow = (info, cb) => {
   console.log('this is info', info);
   const setting = {
     url: `http://www.zillow.com/webservice/GetSearchResults.htm?zws-id=${
-      process.env.ATTOM_API
+      process.env.ZILLOW_API
     }&address=${info.address}&citystatezip=${info.citystatezip}`,
     headers: {
       'User-Agent': 'request',
-      Authorization: `token ${process.env.ATTOM_API}`,
+      Authorization: `token ${process.env.ZILLOW_API}`,
     },
   };
 
@@ -25,4 +24,4 @@ const Attom = (info, cb) => {
   });
 };
 
-module.exports = { Attom };
+module.exports = { Zillow };

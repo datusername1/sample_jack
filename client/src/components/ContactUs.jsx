@@ -48,6 +48,9 @@ const ContactUs = function(props) {
                 placeholder="Message us"
               />
             </label>
+            <div className="large-7 columns">
+              <button className="button">SUBMIT</button>
+            </div>
           </div>
         </div>
       </form>

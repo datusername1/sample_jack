@@ -4,8 +4,9 @@ import style from '../styles/App.css';
 
 import NavBar from './NavBar';
 import BackgroundPicture from './BackgroundPic';
-import FindYourHome from './FindYourHome';
+import Heading from './Heading';
 
+import FindYourHome from './FindYourHome';
 import Catchphrase from './Catchphrase';
 import Features from './Features';
 
@@ -21,6 +22,7 @@ export default class App extends Component {
       agents: [],
       homes: [],
       rooms: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      view: 'homepage',
     };
 
     this.getAgents = this.getAgents.bind(this);
@@ -76,16 +78,20 @@ export default class App extends Component {
           <NavBar />
         </div>
 
-        <div className="BackgroundAndSearch">
+        <div className={`BackgroundAndHeading ${style.backgroundAndHeading}`}>
           <div className="slick">
             <BackgroundPicture slick={slick} />
           </div>
-          <div className={`search ${style.search}`}>
-            <FindYourHome rooms={this.state.rooms} />
+          <div className={`heading ${style.heading}`}>
+            <Heading />
           </div>
         </div>
         <div className={`catchphrase ${style.catchphrase}`}>
           <Catchphrase />
+        </div>
+
+        <div className={`search ${style.search}`}>
+          <FindYourHome rooms={this.state.rooms} />
         </div>
 
         <div
