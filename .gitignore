@@ -1,4 +1,4 @@
-.env
+# .env
 bundle.js
 .config
 node_modules/
