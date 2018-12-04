@@ -10,6 +10,8 @@ const HouseSample = db.define(
     description: { type: Sequelize.STRING(1000) },
     listing_id: { type: Sequelize.INTEGER },
     image: { type: Sequelize.STRING },
+    bed: { type: Sequelize.STRING },
+    bath: { type: Sequelize.STRING },
   },
   {
     timeStamp: true,

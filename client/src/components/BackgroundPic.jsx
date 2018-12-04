@@ -10,7 +10,7 @@ export default class BackgroundPic extends Component {
 
   render() {
     const settings = {
-      autoplay: false,
+      autoplay: true,
       autoplaySpeed: 5000,
       dots: false,
       arrow: false,

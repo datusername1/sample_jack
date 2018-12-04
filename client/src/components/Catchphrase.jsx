@@ -5,7 +5,8 @@ import style from '../styles/Catchphrase.css';
 const Catchphrase = function(props) {
   return (
     <div className={`panel ${style.panel}`}>
-      <h5>My Goal is My Client's Happiness and Satisfaction</h5>
+      <h2>About Us</h2>
+      <h3>Our goal is your happiness and satisfaction</h3>
       <p>
         Incidunt beatae aliquid illo. Perspiciatis soluta sed. A odio eos iste
         et unde ipsum. Nobis eum soluta ea atque voluptate. Odit minima odio aut

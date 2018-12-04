@@ -27,6 +27,7 @@ h2 {
   color: #b0a086;
   font-size: 42px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .features {
@@ -50,9 +51,10 @@ h2 {
 
 .heading {
   position: relative;
-  bottom: 32rem;
+  bottom: 36rem;
 }
 
 .backgroundAndHeading {
-  height: 53rem;
+  height: 54rem;
+  margin-bottom: 3rem;
 }

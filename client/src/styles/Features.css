@@ -2,6 +2,14 @@
   width: 500px;
   border: solid;
   border-color: inherit;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  height: 225.77px;
+}
+
+.image:hover {
+  -webkit-filter: brightness(0.5);
+  cursor: pointer;
 }
 
 .column {

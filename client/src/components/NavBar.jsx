@@ -28,6 +28,9 @@ const NavBar = function(props) {
             <a href="#">TESTIMONIALS</a>
           </li>
           <li>
+            <a href="#">MEET OUR TEAM</a>
+          </li>
+          <li>
             <a href="#">HOME VALUE</a>
           </li>
           <li>

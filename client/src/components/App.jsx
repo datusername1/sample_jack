@@ -21,10 +21,19 @@ export default class App extends Component {
     this.state = {
       agents: [],
       homes: [],
+      slick: [
+        `https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260`,
+        `https://images.pexels.com/photos/1439710/pexels-photo-1439710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260`,
+        `https://images.pexels.com/photos/1027516/pexels-photo-1027516.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260`,
+        `https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260`,
+        `https://images.pexels.com/photos/534151/pexels-photo-534151.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260`,
+      ],
       rooms: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
       view: 'homepage',
     };
 
+    this.myRef = React.createRef();
+    this.refScroll = this.refScroll.bind(this);
     this.getAgents = this.getAgents.bind(this);
   }
 
@@ -47,7 +56,9 @@ export default class App extends Component {
   getHomes() {
     Axios.get('/jack/homes')
       .then(data => {
-        let homes = data.data;
+        let datas = data.data;
+        const random = datas.sort(() => 0.5 - Math.random());
+        const homes = random.slice(0, 6);
         this.setState({
           homes,
         });
@@ -55,14 +66,47 @@ export default class App extends Component {
       .catch(err => console.error(err));
   }
 
+  refScroll() {
+    window.scrollTo({
+      top: this.myRef.current.offsetTop,
+      behavior: 'smooth',
+    });
+  }
+
+  toRender() {
+    if (this.state.view === 'homepage') {
+      return (
+        <div>
+          <div className={`BackgroundAndHeading ${style.backgroundAndHeading}`}>
+            <div className="slick">
+              <BackgroundPicture slick={this.state.slick} />
+            </div>
+            <div className={`heading ${style.heading}`}>
+              <Heading />
+            </div>
+          </div>
+
+          <div className={`catchphrase ${style.catchphrase}`} ref={this.myRef}>
+            <Catchphrase />
+          </div>
+
+          <div className={`search ${style.search}`}>
+            <FindYourHome rooms={this.state.rooms} />
+          </div>
+
+          <div
+            className={`features ${
+              style.row
+            } row small-up-1 medium-up-2 large-up-3`}
+          >
+            <h2>Featured Homes</h2>
+            <Features homes={this.state.homes} />
+          </div>
+        </div>
+      );
+    }
+  }
   render() {
-    const slick = [
-      `https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260`,
-      `https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260`,
-      `https://images.pexels.com/photos/1027516/pexels-photo-1027516.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260`,
-      `https://images.pexels.com/photos/1439710/pexels-photo-1439710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260`,
-      `https://images.pexels.com/photos/534151/pexels-photo-534151.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260`,
-    ];
     return (
       <div>
         {/* <div
@@ -78,32 +122,11 @@ export default class App extends Component {
           <NavBar />
         </div>
 
-        <div className={`BackgroundAndHeading ${style.backgroundAndHeading}`}>
-          <div className="slick">
-            <BackgroundPicture slick={slick} />
-          </div>
-          <div className={`heading ${style.heading}`}>
-            <Heading />
-          </div>
-        </div>
-        <div className={`catchphrase ${style.catchphrase}`}>
-          <Catchphrase />
-        </div>
+        {this.toRender()}
 
-        <div className={`search ${style.search}`}>
-          <FindYourHome rooms={this.state.rooms} />
+        <div className="youMayLike">
+          <h2>Explore Neighorhoods</h2>
         </div>
-
-        <div
-          className={`features ${
-            style.row
-          } row small-up-1 medium-up-2 large-up-3`}
-        >
-          <h2>Featured Homes</h2>
-          <Features homes={this.state.homes} />
-        </div>
-
-        <div className="youMayLike">{/* <YouMayLike /> */}</div>
 
         <div className={` row contactUs ${style.row}`}>
           <h2>Contact Us</h2>
