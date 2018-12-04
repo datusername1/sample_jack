@@ -6,6 +6,7 @@
   transition: all 0.7s ease;
   filter: brightness(70%);
   height: 20.5rem;
+  z-index: 10;
 }
 
 .image:hover {
@@ -15,4 +16,62 @@
 
 .column {
   padding: 0 0 0 0;
+}
+
+.hb {
+  /* left: -11rem; */
+  color: white;
+  font-size: 47px;
+  font-weight: 550;
+}
+
+.west {
+  color: white;
+  font-size: 47px;
+  font-weight: 550;
+}
+
+.fv {
+  /* left: -11rem; */
+  color: white;
+  font-size: 47px;
+  font-weight: 550;
+  /* margin: 0; */
+  width: 29rem;
+  /* padding: 0; */
+}
+
+.gg {
+  /* left: -11rem; */
+  color: white;
+  font-size: 47px;
+  font-weight: 550;
+}
+
+.containerhb {
+  width: 32rem;
+  position: relative;
+  bottom: 33rem;
+  left: 3rem;
+}
+
+.containerwest {
+  width: 23rem;
+  position: relative;
+  bottom: 33rem;
+  left: 45rem;
+}
+
+.containerfv {
+  width: 23rem;
+  position: relative;
+  bottom: 12rem;
+  left: 5rem;
+}
+
+.containergg {
+  width: 25rem;
+  position: relative;
+  bottom: 12rem;
+  left: 45rem;
 }
