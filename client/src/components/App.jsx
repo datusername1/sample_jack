@@ -11,7 +11,6 @@ import Features from './Features';
 
 import YouMayLike from './YouMayLike';
 
-import Test from './test';
 import ContactUs from './ContactUs';
 import Footer from './Footer';
 
@@ -105,10 +104,6 @@ export default class App extends Component {
           <div className={`contact ${style.contactUs}`}>
             <ContactUs />
           </div>
-        </div>
-
-        <div className="test">
-          <Test />
         </div>
 
         <div className="footer">

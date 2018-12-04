@@ -33,12 +33,6 @@ const NavBar = function(props) {
           <li>
             <a href="#">CONTACT</a>
           </li>
-          <li>
-            <a href="#">MY ACCOUNT</a>
-          </li>
-          <li>
-            <a className="button">LOGIN</a>
-          </li>
         </ul>
       </div>
     </div>

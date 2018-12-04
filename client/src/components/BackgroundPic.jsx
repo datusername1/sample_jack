@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../styles/BackgroundPic.css';
+import style from '../styles/BackgroundPic.css';
 import Slider from 'react-slick';
 // import '../styles/Slick.css';
 
@@ -15,9 +15,10 @@ export default class BackgroundPic extends Component {
       dots: false,
       arrow: false,
       infinite: true,
-      speed: 500,
+      speed: 2000,
       slidesToShow: 1,
       slideToScroll: 1,
+      fade: true,
     };
 
     const img = this.props.slick;
@@ -26,7 +27,7 @@ export default class BackgroundPic extends Component {
       <div className="orbit-container">
         <Slider {...settings}>
           {img.map(image => (
-            <img className="image" src={image} />
+            <img className={`image ${style.image}`} src={image} />
           ))}
         </Slider>
       </div>
