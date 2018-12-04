@@ -37,6 +37,9 @@ export default class App extends Component {
       view: 'HOME',
     };
 
+    Axios.defaults.baseURL =
+      'ec2-54-218-247-109.us-west-2.compute.amazonaws.com:8080';
+
     this.myRef = React.createRef();
     this.refScroll = this.refScroll.bind(this);
     this.getAgents = this.getAgents.bind(this);

@@ -72,5 +72,5 @@ const seedHouse = n => {
   }
 };
 
-seedHouse(0);
-seedAgents(100);
+seedHouse(100);
+seedAgents(10);
