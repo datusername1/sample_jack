@@ -125,8 +125,9 @@ export default class App extends Component {
             <Features homes={this.state.homes} />
           </div> */}
           <div>
-            <div className="youMayLike">
+            <div className={`explore ${style.row}`}>
               <h2>Explore Neighorhoods</h2>
+              <Explore />
             </div>
           </div>
         </div>

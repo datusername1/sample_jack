@@ -1,0 +1,18 @@
+.image {
+  width: 600px;
+  border: solid;
+  border-color: white;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  filter: brightness(70%);
+  height: 20.5rem;
+}
+
+.image:hover {
+  -webkit-filter: brightness(1);
+  cursor: pointer;
+}
+
+.column {
+  padding: 0 0 0 0;
+}

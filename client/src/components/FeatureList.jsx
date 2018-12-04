@@ -1,11 +1,11 @@
 import React from 'react';
 import Slider from 'react-slick';
+import Popup from 'reactjs-popup';
 import style from '../styles/FeatureList.css';
 
 const FeatureList = function(props) {
   const settings = {
     adaptiveHeight: false,
-    focusOnSelect: true,
     dots: true,
     infinite: true,
     speed: 500,
