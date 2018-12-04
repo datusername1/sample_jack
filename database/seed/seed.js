@@ -38,6 +38,7 @@ const seedAgents = n => {
       img: `https://loremflickr.com/g/320/240/people?lock=${Math.floor(
         Math.random() * 1000
       )}`,
+      job: `Important Job`,
     });
   }
 };
@@ -71,5 +72,5 @@ const seedHouse = n => {
   }
 };
 
-seedHouse(100);
+seedHouse(0);
 seedAgents(100);

@@ -18,16 +18,19 @@ const NavBar = function(props) {
       </div>
       <div className="top-bar-right">
         <ul className="menu" data-responsive-menu="accordion">
-          <li className={`menu-text ${style.menuText}`}>
+          <li
+            className={`menu-text ${style.menuText}`}
+            onClick={e => props.valueToRender(e)}
+          >
             <a href="#">HOME</a>
           </li>
           <li>
             <a href="#">ABOUT</a>
           </li>
-          <li>
+          {/* <li>
             <a href="#">TESTIMONIALS</a>
-          </li>
-          <li>
+          </li> */}
+          <li onClick={e => props.valueToRender(e)}>
             <a href="#">MEET OUR TEAM</a>
           </li>
           <li>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const YouMaylike = function(props) {
+const Explore = function(props) {
   return (
     <div>
       <div>Hello</div>
@@ -8,4 +8,4 @@ const YouMaylike = function(props) {
   );
 };
 
-export default YouMaylike;
+export default Explore;

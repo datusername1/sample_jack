@@ -8,6 +8,7 @@ const AgentSample = db.define(
     firstName: { type: Sequelize.STRING },
     lastName: { type: Sequelize.STRING },
     img: { type: Sequelize.STRING },
+    job: { type: Sequelize.STRING },
   },
   {
     timeStamp: true,

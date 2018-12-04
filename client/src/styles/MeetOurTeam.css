@@ -1,0 +1,41 @@
+.image {
+  width: 500px;
+  border: solid;
+  border-color: inherit;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  height: 225.77px;
+  filter: brightness(70%);
+}
+
+.image:hover {
+  -webkit-filter: brightness(1);
+  cursor: pointer;
+}
+
+.column {
+  max-height: 669.326px;
+  margin-top: 3rem;
+}
+
+.subheader {
+  overflow-y: scroll;
+  max-height: 202px;
+}
+
+.agentName {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.callout {
+  background-color: #262b2c;
+  font-family: Josefin Sans, serif !important;
+  border-color: white;
+  color: white;
+  text-align: center;
+}
+
+.job {
+  font-weight: 600;
+}

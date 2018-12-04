@@ -11,7 +11,11 @@ import FeatureList from './FeatureList';
 import Features from './Features';
 import Catchphrase from './Catchphrase';
 
-import YouMayLike from './YouMayLike';
+import Explore from './Explore';
+import MeetOurTeam from './MeetOurTeam';
+
+//conditional render
+import HomeValue from './HomeValue/HomeValue';
 
 import ContactUs from './ContactUs';
 import Footer from './Footer';
@@ -30,12 +34,13 @@ export default class App extends Component {
         `https://images.pexels.com/photos/534151/pexels-photo-534151.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260`,
       ],
       rooms: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-      view: 'homepage',
+      view: 'HOME',
     };
 
     this.myRef = React.createRef();
     this.refScroll = this.refScroll.bind(this);
     this.getAgents = this.getAgents.bind(this);
+    this.valueToRender = this.valueToRender.bind(this);
   }
 
   componentDidMount() {
@@ -46,7 +51,7 @@ export default class App extends Component {
   getAgents() {
     Axios.get('/jack/agents')
       .then(data => {
-        let agents = data.data;
+        let agents = data.data.slice(0, 6);
         this.setState({
           agents,
         });
@@ -74,8 +79,17 @@ export default class App extends Component {
     });
   }
 
+  valueToRender(e) {
+    console.log(e);
+    const text = e.target.text;
+    console.log(text);
+    this.setState({
+      view: text,
+    });
+  }
+
   toRender() {
-    if (this.state.view === 'homepage') {
+    if (this.state.view === 'HOME') {
       return (
         <div>
           <div className={`BackgroundAndHeading ${style.backgroundAndHeading}`}>
@@ -110,6 +124,18 @@ export default class App extends Component {
             <h2>Featured Homes</h2>
             <Features homes={this.state.homes} />
           </div> */}
+          <div>
+            <div className="youMayLike">
+              <h2>Explore Neighorhoods</h2>
+            </div>
+          </div>
+        </div>
+      );
+    } else if ('MEET OUR TEAM') {
+      return (
+        <div className={`row ${style.row} small-up-1 medium-up-2 large-up-3`}>
+          <h2>MEET OUR TEAM</h2>
+          <MeetOurTeam agents={this.state.agents} />
         </div>
       );
     }
@@ -127,14 +153,10 @@ export default class App extends Component {
         </div> */}
 
         <div className={`navigation ${style.navigation}`}>
-          <NavBar />
+          <NavBar valueToRender={this.valueToRender} />
         </div>
 
         {this.toRender()}
-
-        <div className="youMayLike">
-          <h2>Explore Neighorhoods</h2>
-        </div>
 
         <div className={` row contactUs ${style.row}`}>
           <h2>Contact Us</h2>
