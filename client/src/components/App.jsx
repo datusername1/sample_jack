@@ -38,7 +38,7 @@ export default class App extends Component {
     };
 
     Axios.defaults.baseURL =
-      'ec2-54-218-247-109.us-west-2.compute.amazonaws.com';
+      'http://ec2-54-218-247-109.us-west-2.compute.amazonaws.com';
 
     this.myRef = React.createRef();
     this.refScroll = this.refScroll.bind(this);
