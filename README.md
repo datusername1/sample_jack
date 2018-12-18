@@ -10,10 +10,10 @@ Getting started:
 
 The codebase uses Zillow and Attom API to obtain real estate information from the surrounding areas. It is necessary to API keys from both companies prior to downloading and running locally.\
 Please visit their respective sites for API information:\
-Attom\
+Attom
 > https://api.developer.attomdata.com/docs 
 
-Zillow\ 
+Zillow
 > https://www.zillow.com/howto/api/APIOverview.htm
 
 Once API keys are obtained:
