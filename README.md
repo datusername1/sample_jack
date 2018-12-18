@@ -11,7 +11,7 @@ Getting started:
 The codebase uses Zillow and Attom API to obtain real estate information from the surrounding areas. It is necessary to API keys from both companies prior to downloading and running locally.\
 Please visit their respective sites for API information:\
 Attom\
-> https://api.developer.attomdata.com/docs\
+> https://api.developer.attomdata.com/docs \
 Zillow\ 
 > https://www.zillow.com/howto/api/APIOverview.htm
 
@@ -19,7 +19,7 @@ Once API keys are obtained:
 ```
 Npm install => to get all dependecies
 ```
-This repository uses PostgreSQL, please refer to documentations if PostgreSQL is not installed on local machine:\
+This repository uses PostgreSQL, please refer to documentations if PostgreSQL is not installed on local machine:
 > https://www.postgresql.org/docs/10/tutorial-start.html
 
 **ENV**\
