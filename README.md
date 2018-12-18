@@ -5,16 +5,37 @@ This repository is a personal project that is used to mock up a realestate websi
 ## Tech Stack
 ReactJS | PostgreSQL | Nodejs | Foundation6 | CSS 
 
+## Using repository locally
+Getting started:
 
-Getting started:\
+The codebase uses Zillow and Attom API to obtain real estate information from the surrounding areas. It is necessary to API keys from both companies prior to downloading and running locally.\
+Please visit their respective sites for API information:\
+Attom\
+> https://api.developer.attomdata.com/docs\
+Zillow\ 
+> https://www.zillow.com/howto/api/APIOverview.htm
 
-1. Npm install => to get all dependecies\
-2. Need to seed database with npm run seed: DATABASE USED IS POSTGRES\
-    a. Create a .env file
-   i. once created, follow .env-example and list out the correct username, database, etc.
-   b. Once that is done, check to make sure you are connected to postgres\
-   _If Postgres is not installed, please follow instruction on their site to ensure that installatioin methods are met prior to using seed function_\
-3. npm start => to start server. This will pertain to localhost server with port set inside .env file\
-4. npm run react-dev => to build webpack.
+Once API keys are obtained:
+```
+Npm install => to get all dependecies
+```
+This repository uses PostgreSQL, please refer to documentations if PostgreSQL is not installed on local machine:\
+> https://www.postgresql.org/docs/10/tutorial-start.html
 
-Current functionality are limited. This is considered homepage only and is currently used for mockup. Finalize details will be generated later down the road.
+**ENV**\
+Please replace all information inside the ENV file to correspond to your database authentication information. Be sure to ignore prior to commit. 
+
+## Seeding:
+To see fake home data:
+```
+npm run seed
+```
+
+## Starting server locally and webpack
+```
+npm start
+npm run react-dev
+```
+
+## Ongoing Project: 
+Current functionalities are limited as this is an ongoing project. The mock-up is being reviewed and additional features will be added in the future. 
