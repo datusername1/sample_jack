@@ -1,6 +1,10 @@
-# sample_jack
+# Sample_Jack_Real-estate Site
 
-This file is currently used to mock up a realestate website specificially designed for Jack Tran, a real estate agent located in Westminster, Huntington Beach, and Fountain Valley area.
+This repository is a personal project that is used to mock up a realestate website specificially designed for Jack Tran, a real estate agent located in Westminster, Huntington Beach, and Fountain Valley area.
+
+## Tech Stack
+ReactJS | PostgreSQL | Nodejs | Foundation6 | CSS 
+
 
 Getting started:\
 
