@@ -5,6 +5,10 @@ This repository is a personal project that is used to mock up a realestate websi
 ## Tech Stack
 ReactJS | PostgreSQL | Nodejs | Foundation6 | CSS 
 
+## Demo Site:
+This project is still in progress. The demo site currently only shows front end functionality. API has been removed for development purposes. 
+> http://34.217.149.124/
+
 ## Using repository locally
 Getting started:
 
